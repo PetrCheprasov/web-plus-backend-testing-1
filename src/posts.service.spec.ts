@@ -13,7 +13,6 @@ describe('PostsService', () => {
   });
 
   it('should add a new post', () => {
-<<<<<<< HEAD
     const createdPost = postsService.create(post);
 
     expect(createdPost).toEqual(
@@ -26,21 +25,10 @@ describe('PostsService', () => {
   });
 
   it('should find a post', () => {
-    const foundPost = postsService.find('1');
+    const createdPost = postsService.create(post);
+    const foundPost = postsService.find(createdPost.id);
 
     expect(foundPost).toBeDefined();
-    expect(foundPost).toEqual(
-      expect.objectContaining({
-        id: '1',
-        text: 'Some pre-existing post',
-      }),
-    );
-=======
-    // реализуйте тест-кейс
-  });
-
-  it('should find a post', () => {
-    // реализуйте тест-кейс
->>>>>>> b68aa418a28cd79cca2836f1f11771d95297c634
+    expect(foundPost).toEqual(createdPost);
   });
 });
