@@ -13,6 +13,7 @@ describe('PostsService', () => {
   });
 
   it('should add a new post', () => {
+<<<<<<< HEAD
     const createdPost = postsService.create(post);
 
     expect(createdPost).toEqual(
@@ -34,5 +35,12 @@ describe('PostsService', () => {
         text: 'Some pre-existing post',
       }),
     );
+=======
+    // реализуйте тест-кейс
+  });
+
+  it('should find a post', () => {
+    // реализуйте тест-кейс
+>>>>>>> b68aa418a28cd79cca2836f1f11771d95297c634
   });
 });
